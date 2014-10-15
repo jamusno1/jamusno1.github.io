@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="canvas.js"></script>
+    </head>
+    <body>
+<!--        Choosing image-->
+        <p>
+            <font face='segoe ui' color='green'>Please choose an image: </font>
+            <input id="inputBut" type="file" id="files" onchange="getNewFile(this.files);" >
+        </p> 
+        
+<!--        A horizontal line-->
+        <hr>
+        
+<!--        For grayscale image-->
+        <button type="button" onclick="grayscale()">Grayscale</button>
+        <p></p>
+        
+<!--        Center image-->
+        <div align="center">
+            <canvas id="myCanvas" align="center">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+        </div>    
+        
+
+    </body>
+</html>
