@@ -19,7 +19,7 @@ function drawBg(video, context, width, height) {
     if(video.paused || video.ended) return false;
     
     //Draw the frame to canvas
-    context.drawImage(video, 0, 0); 
+    context.drawImage(video, 0, 0, width, height); 
         
     //Get image data from the canvas
     var frmData = context.getImageData(0, 0, width, height);
