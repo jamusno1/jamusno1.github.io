@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        //For alt code symbol
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="myCSS.css">
         <script src="video.js"></script>
     </head>
     
-    <canvas id="bgCanvas"></canvas>
-    
-    <video id="video" width="720" controls>
-        <source src="../videoWithGrayscaleBackGround/iwontgiveup.mp4" type="video/mp4">
-    </video>
+    <body>
+        <canvas id="dstCanvas"></canvas>
+        <video id="video">
+            <source src="iwontgiveup.mp4" type="video/mp4">
+        </video>
+        
+        <button id="playBut" type="button" onclick="playVid()">PLAY</button>
+        <button id="replayBut" type="button" onclick="replayVid()">RESTART</button>
+        <button id="filterBut" type="button" onclick="changeFilter()">CHANGE FILTER</button>
+        
+        <p id="srcText">ORIGINAL</p>
+        <p id="dstText">PROCESSED</p>
+        <p id="filterText">Grayscale</p>
+    </body>
     
 </html>

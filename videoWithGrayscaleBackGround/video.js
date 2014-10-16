@@ -1,21 +1,20 @@
 document.addEventListener('DOMContentLoaded', function(){
     var v = document.getElementById('video');
     var c = document.getElementById('bgCanvas');
-    var ctx = c.getContext('2d');
-    
-    //Set video size to canvas
-    c.width = v.clientWidth;
-    c.height = v.clientHeight;
+    var ctx = c.getContext('2d');   
     
     //When user click PLAY
     v.addEventListener('play', function(){
+        //Set video size to canvas
+        c.width = v.clientWidth;
+        c.height = v.clientHeight;
         drawBg(this, ctx, c.width, c.height);
     },false);
-
 },false);
 
 //Draw grayscale background
-function drawBg(video, context, width, height) {
+function drawBg(video, context, width, height)
+{
     if(video.paused || video.ended) return false;
     
     //Draw the frame to canvas
@@ -23,15 +22,19 @@ function drawBg(video, context, width, height) {
         
     //Get image data from the canvas
     var frmData = context.getImageData(0, 0, width, height);
+    var pData = frmData.data;
     
     //Acess all pixels and grayscale them
-    for (var i=0; i<frmData.data.length; i+=4)
+    var length = pData.length;
+    for (var i=0; i<length; i+=4)
     {                    
-        var gray = frmData.data[i]*0.3 + frmData.data[i+1]*0.59 + frmData.data[i+2]*0.11;
-        frmData.data[i] = gray;
-        frmData.data[i+1] = gray;
-        frmData.data[i+2] = gray;
+        var gray = pData[i]*0.3 + pData[i+1]*0.59 + pData[i+2]*0.11;
+        pData[i] = gray;
+        pData[i+1] = gray;
+        pData[i+2] = gray;
     }
+    
+    frmData.data = pData;
     
     //Redraw on the canvas
     context.putImageData(frmData, 0, 0);
@@ -39,3 +42,4 @@ function drawBg(video, context, width, height) {
     //Repeat
     setTimeout(drawBg, 20, video, context, width, height); 
 }
+

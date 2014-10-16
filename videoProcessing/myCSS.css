@@ -1,0 +1,100 @@
+ 
+body
+{
+	background: black;
+}
+
+button
+{
+    font-family: Segoe UI;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    text-align: center;
+    color: #fff;
+    
+    position: fixed;
+    z-index: +1;
+    background: transparent;    
+}
+
+#playBut
+{    
+    top: 30px;
+    right: 310px;
+}
+
+#replayBut
+{
+    top: 30px;
+    right: 200px;
+}
+
+
+#filterBut
+{
+    top: 30px;
+    right: 30px;
+}
+
+#filterText
+{
+    font: italic 16px 'segoe ui';
+    text-align: right;    
+    color: #00CCA0;
+    
+    position: fixed;
+    top: 50px;
+    right: 30px;
+}
+/*160 100 545*/
+#srcText
+{
+    font: 25px 'segoe ui';
+    color: #f00;
+    
+    position: fixed;
+    top: 100px;
+    left: 200px;
+}
+
+#dstText
+{
+    font: 25px 'segoe ui';
+    color: #f00;
+    
+    position: fixed;
+    top: 100px;
+    left: 675px;
+}
+
+canvas
+{
+	position:absolute;
+	width: 400px;
+	height: 224px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+#dstCanvas
+{
+	top: 160px;
+    left: 675px;
+}
+
+#video
+{
+    position:absolute;
+	width: 400px;
+	height: 224px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    top: 160px;
+    left: 200px;
+}
