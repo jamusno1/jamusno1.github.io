@@ -1,7 +1,7 @@
 //Init
 //Global variable for filter type
 var filter = 1;   //1 = Grayscale
-
+ 
 //Handle events
 document.addEventListener('DOMContentLoaded', function(){
     var v = document.getElementById('video');

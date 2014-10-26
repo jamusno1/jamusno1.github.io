@@ -42,4 +42,3 @@ function drawBg(video, context, width, height)
     //Repeat
     setTimeout(drawBg, 20, video, context, width, height); 
 }
-
